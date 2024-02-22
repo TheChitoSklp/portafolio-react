@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  width: 153.994px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  & h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.333px;
+  }
+  & .icons-socials {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .footer {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    & .icons-socials {
+      width: 40%;
+      justify-content: space-evenly;
+    }
+  }
+}

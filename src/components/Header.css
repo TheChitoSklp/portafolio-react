@@ -5,13 +5,14 @@ body {
 .header-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  height: 627px;
+  margin-bottom: 4rem;
+  height: auto;
   grid-auto-flow: row;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   grid-template-areas:
     "img-links"
     "img-links"
@@ -29,10 +30,6 @@ body {
 }
 
 .img-links {
-  background-image: url("/public/image-profile-mobile.webp");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -42,11 +39,21 @@ body {
   flex-shrink: 0;
 }
 .social-links-img {
+  background-image: url("/public/image-profile-mobile.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 185px;
+  height: 100%;
   gap: 25px;
   padding-top: 25px;
+  & span {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.333px;
+  }
 }
 .icon-container-links {
   display: flex;
@@ -58,4 +65,103 @@ body {
 .icon img {
   width: 20px;
   height: 20px;
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.h2-margin-t {
+  margin: 20px 0;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--color-verde);
+}
+.contact {
+  text-decoration: none;
+  color: var(--color-blanco);
+  padding: 5px;
+  border-bottom: solid 3px var(--color-verde);
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 600px;
+  }
+  .h2-margin-t {
+    width: 75%;
+    text-align: justify;
+  }
+
+  .info-section {
+    grid-area: 1 / 1 / 3 / 5;
+  }
+
+  .img-links {
+    grid-area: 1 / 1 / 2 / 6;
+    height: 100%;
+    width: 100%;
+  }
+  .social-links-img {
+    width: 90%;
+    height: 30px;
+    background: none;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .icon-container-links {
+    width: 192.492px;
+    height: 25px;
+    justify-content: space-evenly;
+  }
+  .icon {
+    & img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .img-man {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 4 / 3 / 6;
+    background-image: url("/public/image-profile-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .info-section {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    & h2 {
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: -2.045px;
+      & span {
+        display: block;
+      }
+    }
+    & p {
+      text-align: justify;
+      width: 65%;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+    & a {
+      position: absolute;
+      bottom: 1rem;
+      left: 6rem;
+      padding-bottom: 1rem;
+    }
+  }
+  .hr-header {
+    width: 90%;
+  }
 }

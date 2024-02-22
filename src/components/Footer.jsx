@@ -3,6 +3,7 @@ import iconGit from "/icon-github.svg";
 import iconLinkedin from "/icon-linkedin.svg";
 import iconX from "/icon-twitter.svg";
 import iconMentor from "/icon-frontend-mentor.svg";
+import "./Footer.css";
 export const Footer = () => {
   return (
     <>
